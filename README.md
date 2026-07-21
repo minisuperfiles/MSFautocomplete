@@ -35,10 +35,12 @@ Add references to MSFautocomplete’s JavaScript and Stylesheet.
 ```
 
 ```html
-<input type="search" class="searchbox" name="search" id="search" />
+<input type="text" class="searchbox" name="search" id="search" />
 ```
 
 There are two types one is client side search and anthor one is server side search.
+
+## server side example
 
 ```javascript
 let token =
@@ -60,7 +62,7 @@ var search = new MSFautocomplate(document.querySelector('#search'), {
 
 ## How to handle server request.
 
-Search data come from qurey format.
+Searching data come from qurey format.
 
 ### Example
 
@@ -100,7 +102,6 @@ var search = new MSFautocomplate(document.querySelector('#search'), {
     { id: '4', name: 'CSS' },
     { id: '5', name: 'Pyton' },
   ],
-  /* severSide is sever side */
 });
 ```
 
