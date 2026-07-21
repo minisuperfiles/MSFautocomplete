@@ -1,0 +1,57 @@
+.msf_autocomplate_container ul.msf_autocomplate {
+  list-style-type: none; /* Removes the bullets */
+  padding: 0; /* Removes default left indentation */
+  margin: 0; /* Removes default spacing */
+}
+
+.msf_autocomplate_container .msf_autocomplate {
+  border: 1px solid #e4e4e4;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  z-index: 240;
+}
+.msf_autocomplate_container .msf_autocomplate {
+  max-height: 200px;
+  overflow: auto;
+  background-color: white;
+  display: grid;
+  text-align: left;
+}
+.msf_autocomplate li:hover,
+.msf_autocomplate li:focus {
+  background-color: #e5e5e5;
+}
+.msf_autocomplate li.active {
+  background-color: #e5e5e5;
+}
+.msf_autocomplate li {
+  padding-left: 4px;
+  background-color: #ffffff;
+  cursor: pointer;
+}
+.msf_autocomplate label {
+  display: block;
+  margin-bottom: 1px;
+}
+.msf_autocomplate .searchbox {
+  width: -moz-available;
+  width: -webkit-fill-available;
+  padding: 0;
+  margin: 0;
+  height: 30px;
+  font-size: 12px;
+}
+.msf_autocomplate li:hover,
+.msf_autocomplate li:focus {
+  background-color: #e5e5e5;
+}
+.msf_autocomplate li.active {
+  background-color: #e5e5e5;
+}
+.msf_autocomplate li {
+  padding-left: 4px;
+  background-color: #ffffff;
+  cursor: pointer;
+}
