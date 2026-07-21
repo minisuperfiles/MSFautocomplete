@@ -1,0 +1,40 @@
+<!doctype html>
+<html>
+  <head>
+    <title>autocomplate | MSFautocomplate | Minisuperfiles</title>
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type" />
+    <link rel="stylesheet" type="text/css" href="msfautocomplate.css" />
+    <script src="msfautocomplate.js"></script>
+  </head>
+  <body>  
+
+<br>
+    <input type="search" class="searchbox" name="search" id="search">
+  </body>
+  <script>
+  let token = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI1YTYyMTYyZC1mMjVhLTQ0NWQtYTRhMC05MDBiNjRmNjVhYzciLCJ1c2VybmFtZSI6ImFkbWluIiwiaWF0IjoxNzg0NTY0NzE5LCJleHAiOjE3ODQ1NjgzMTl9.2FfS5vkk9z_u4Jb9GbuIbYfpXvWubmNVF5PsS4G9x7I";
+   var select2 = new MSFautocomplate(
+    document.querySelector('#search'),
+    {
+      width: '250px',
+      height: '45px',
+      className: "form-control",
+      onSelected:function(id, name, instance) {
+        console.log("ok...",id, name, instance);
+      },
+      dataList:[
+        {id: "1", name: "led light"},
+        {id: "2", name: "blub"},
+        {id: "3", name: "led light 200wh"},
+        {id: "4", name: "wire" },
+        {id: "5", name: "tubelight"}
+      ],
+      severSide: {
+        url:'http://localhost:3005/api/categories/cat/search',
+        headers: [['Authorization', 'Bearer '+ token]]
+      }
+    }
+  );
+  </script>
+</html>
+</html>
