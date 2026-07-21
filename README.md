@@ -142,6 +142,6 @@ settings = {
   <li><b>onSelected</b> : When MSFautocomplate is changed this callback function will run. In this function, there are three parameters.<ol type="i">
   <li><b>id</b> : you receive item id</li>
   <li><b>name</b> : You get selected item name.</li>
-  <li><b>instance</b> : It's instance variable of mulitiselect, you can access MSFautocomplate properties and methods</li></ol></li>
+  <li><b>instance</b> : It's instance variable of autocomplate, you can access MSFautocomplate properties and methods</li></ol></li>
   <li><b>getSelectedData</b> : This method uses to get user search data.</li>
   </ol>

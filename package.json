@@ -1,6 +1,6 @@
 {
   "name": "msfautocomplete",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "MSFatuocomate is search input library. When you any item name you will get id and name. made with pure JavaScript.",
   "main": "msfautocomplate.js",
   "scripts": {
@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/minisuperfiles/MSFautocomplete.git"
+    "url": "https://github.com/minisuperfiles/MSFautocomplete.git"
   },
   "keywords": [
     "autocomplete",
