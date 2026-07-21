@@ -11,23 +11,23 @@ npm i msfautocomplete
 ```
 
 ```javascript
-import MSFmultiSelect from 'msfautocomplete';
+import MSFautocomplete from 'msfautocomplete';
 import 'msfautocomplete/msfautocomplete.min.css';
 ```
 
 Alternatively, you can simply embed it in your HTML file.
 
 ```html
-<script src="https://cdn.jsdelivr.net/gh/minisuperfiles/MSFmultiSelect/msfautocomplete.min.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/minisuperfiles/MSFautocomplete/msfautocomplete.min.js"></script>
 <link
-  href="https://cdn.jsdelivr.net/gh/minisuperfiles/MSFmultiSelect/msfautocomplete.min.css"
+  href="https://cdn.jsdelivr.net/gh/minisuperfiles/MSFautocomplete/msfautocomplete.min.css"
   rel="stylesheet"
 />
 ```
 
 ## Using Example
 
-Add references to MSFmultiSelect’s JavaScript and Stylesheet.
+Add references to MSFautocomplete’s JavaScript and Stylesheet.
 
 ```html
 <script src="msfautocomplete.js"></script>
@@ -50,14 +50,6 @@ var search = new MSFautocomplate(document.querySelector('#search'), {
   onSelected: function (id, name, instance) {
     console.log('ok...', id, name, instance);
   },
-  /* data list is client side */
-  dataList: [
-    { id: '1', name: 'Java' },
-    { id: '2', name: 'Javascript' },
-    { id: '3', name: 'HTML' },
-    { id: '4', name: 'CSS' },
-    { id: '5', name: 'Pyton' },
-  ],
   /* severSide is sever side */
   severSide: {
     url: 'http://localhost:3005/api/categories/cat/search',
@@ -90,7 +82,7 @@ return { statusCode: 200, data:[
 ]}
 ````
 
-## client side example
+## Client side example
 
 ```javascript
 var search = new MSFautocomplate(document.querySelector('#search'), {
@@ -133,6 +125,7 @@ settings = {
     { id: '4', name: 'CSS' },
     { id: '5', name: 'Pyton' },
   ],
+  /* Sever side */
   severSide: {
     url: 'http://localhost:3005/api/categories/cat/search',
     headers: [['Authorization', 'Bearer 2FfS5vkk9z_u4Jb9GbuIbYfpXvWubmNVF5PsS4G9x7I']],
