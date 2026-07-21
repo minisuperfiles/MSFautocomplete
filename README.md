@@ -1,6 +1,6 @@
 # MSFautocomplete
 
-MSFatuocomate is search input library. When you any item name you will get id and name. made with pure JavaScript.
+MSFatuocomate is search input library. When you any item name you will get id and name. Made with pure JavaScript.
 
 ## Installation
 
