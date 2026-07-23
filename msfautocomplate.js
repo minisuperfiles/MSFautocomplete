@@ -1,4 +1,4 @@
-class MSFautocomplate {
+export default class MSFautocomplate {
   search;
   settings;
   container;

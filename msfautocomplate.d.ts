@@ -13,9 +13,9 @@ export interface MSFautocomplateSettings {
   severSide?: MSFautocomplateSeverSide;
   dataList?: Array<MSFautocomplateDataList>;
   onSelected?: (
-    id: string | number;
-    name: string;
-    instance: MSFautocomplate;
+    id: string | number,
+    name: string,
+    instance: MSFautocomplate,
   ) => void;
 }
 export declare class MSFautocomplate {
