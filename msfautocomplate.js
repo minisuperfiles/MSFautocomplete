@@ -1,4 +1,4 @@
-export default class MSFautocomplate {
+class MSFautocomplate {
   search;
   settings;
   container;
@@ -150,3 +150,6 @@ export default class MSFautocomplate {
     }
   }
 }
+
+export default MSFautocomplate;
+window.MSFautocomplate = MSFautocomplate;
