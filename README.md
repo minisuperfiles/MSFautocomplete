@@ -12,7 +12,7 @@ npm i msfautocomplete
 
 ```javascript
 import { MSFautocomplete } from 'msfautocomplete';
-import 'msfautocomplete/msfautocomplete.min.css';
+import 'msfautocomplete/msfautocomplete.css';
 ```
 
 Alternatively, you can simply embed it in your HTML file.
@@ -21,10 +21,10 @@ Alternatively, you can simply embed it in your HTML file.
 <script
   type="module"
   async="false"
-  src="https://cdn.jsdelivr.net/gh/minisuperfiles/MSFautocomplete/msfautocomplete.min.js"
+  src="https://cdn.jsdelivr.net/gh/minisuperfiles/MSFautocomplete/msfautocomplete.js"
 ></script>
 <link
-  href="https://cdn.jsdelivr.net/gh/minisuperfiles/MSFautocomplete/msfautocomplete.min.css"
+  href="https://cdn.jsdelivr.net/gh/minisuperfiles/MSFautocomplete/msfautocomplete.css"
   rel="stylesheet"
 />
 ```

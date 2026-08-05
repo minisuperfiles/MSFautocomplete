@@ -7,13 +7,15 @@ class MSFautocomplate {
   selectedName;
   constructor(search, settings) {
     this.search = search;
+    //console.log(search, 'this.search');
     this.settings = settings;
-    if (this.className) this.search.className = this.settings.className;
+    if (this.settings.className)
+      this.search.className = this.settings.className;
     if (!this.settings.width) this.settings.width = '250px';
     if (!this.settings.height) this.settings.height = '45px';
     this.create();
     this.init();
-    this.render([...this.settings.dataList]);
+    if (this.settings.dataList) this.render([...this.settings.dataList]);
     this.container.style.display = 'none';
   }
   init() {
@@ -21,9 +23,11 @@ class MSFautocomplate {
       this.container.style.display = 'none';
     });
     let self = this;
+    //console.log(this.search, 'this.search');
     this.search.addEventListener(
       'keyup',
       function () {
+        //console.log('ok..................................ok');
         if (self.settings.severSide) {
           self.getDataFromServer(self.search.value);
         } else {
@@ -48,16 +52,18 @@ class MSFautocomplate {
     for (let i = 0; i < data.length; i++) {
       let lebal = document.createElement('lebal');
       lebal.setAttribute('msf_data.id', data[i].id);
+      lebal.setAttribute('data_set', JSON.stringify(data[i]));
       lebal.addEventListener(
         'click',
         function () {
           self.search.value = lebal.innerText;
           if (self.settings.onSelected) {
             let id = lebal.getAttribute('msf_data.id');
+            let dataget = JSON.parse(lebal.getAttribute('data_set'));
             let name = lebal.innerText;
             self.selectedId = id;
             self.selectedName = name;
-            self.settings.onSelected(id, name, self);
+            self.settings.onSelected(id, dataget, self);
           }
         }.bind(lebal, self),
       );
@@ -132,7 +138,7 @@ class MSFautocomplate {
     });
     http
       .then((res) => {
-        console.log(res);
+        //console.log(res);
         if (res.statusCode == 200) {
           this.settings.dataList = [...res.data];
           this.data_render(value);
@@ -140,6 +146,8 @@ class MSFautocomplate {
       })
       .catch((error) => {
         console.log(error);
+        if (this.settings.severSide && this.settings.severSide.reqErrorCallback)
+          this.settings.severSide.reqErrorCallback(error);
       });
   }
   getSelectedData() {
@@ -150,6 +158,3 @@ class MSFautocomplate {
     }
   }
 }
-
-export default MSFautocomplate;
-window.MSFautocomplate = MSFautocomplate;
