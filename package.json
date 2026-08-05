@@ -1,6 +1,6 @@
 {
   "name": "msfautocomplete",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "MSFatuocomate is search input library. When you any item name you will get id and name. made with pure JavaScript.",
   "main": "msfautocomplate.js",
   "scripts": {
@@ -13,7 +13,15 @@
   "keywords": [
     "autocomplete",
     "search",
-    "msfautocomplate"
+    "msfautocomplate",
+    "search box",
+    "search input",
+    "search input box",
+    "search input field",
+    "search input text",
+    "search input text box",
+    "search input text field",
+    "search input text area"
   ],
   "author": "minisuperfiles",
   "license": "ISC",

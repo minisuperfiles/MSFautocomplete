@@ -16,6 +16,7 @@ export interface MSFautocomplateSettings {
     id: string | number,
     name: string,
     instance: MSFautocomplate,
+    reqErrorCallback?: (error: any) => void,
   ) => void;
 }
 export declare class MSFautocomplate {
